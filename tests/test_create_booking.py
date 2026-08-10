@@ -12,7 +12,6 @@ def test_create_booking(
         generate_random_booking_data
 ):
     response_json = api_client.create_booking(booking_data=generate_random_booking_data)
-    print(response_json)
     assert isinstance(response_json, dict)
     assert response_json["booking"] == generate_random_booking_data
     assert "bookingid" in response_json
